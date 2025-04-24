@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail } from 'lucide-react';
@@ -54,7 +53,7 @@ const ContactForm = () => {
         <div className="flex flex-col space-y-4">
           <div className="flex items-center space-x-4">
             <Mail className="text-primary" />
-            <span>hello@example.com</span>
+            <span>ayushman.raj@lpu.in</span>
           </div>
           
           <div className="flex space-x-4 mt-6">

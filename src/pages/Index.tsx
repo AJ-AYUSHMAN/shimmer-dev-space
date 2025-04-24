@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
@@ -13,19 +12,18 @@ import ContactForm from '@/components/ContactForm';
 import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Download, ArrowDown } from 'lucide-react';
+import JobTitle from '@/components/JobTitle';
 
 const IndexPage = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    // Simulate loading time to show the welcome animation
     const timer = setTimeout(() => {
       setLoading(false);
     }, 1500);
     return () => clearTimeout(timer);
   }, []);
 
-  // Skills data
   const skillsData = [
     {
       title: 'Frontend Development',
@@ -41,7 +39,6 @@ const IndexPage = () => {
     }
   ];
 
-  // Projects data
   const projectsData = [
     {
       title: 'E-Commerce Platform',
@@ -66,7 +63,6 @@ const IndexPage = () => {
     }
   ];
 
-  // Education data
   const educationData = [
     {
       institution: 'Stanford University',
@@ -82,7 +78,6 @@ const IndexPage = () => {
     }
   ];
 
-  // Timeline data
   const timelineData = [
     {
       date: '2023',
@@ -122,7 +117,7 @@ const IndexPage = () => {
               transition={{ duration: 0.5 }}
               className="text-4xl font-bold text-gradient mb-4"
             >
-              John Doe
+              Ayushman Raj
             </motion.div>
             <motion.div
               initial={{ opacity: 0 }}
@@ -137,68 +132,81 @@ const IndexPage = () => {
           <>
             <Navbar />
 
-            {/* Hero Section */}
             <section 
               id="home" 
               className="min-h-screen flex items-center justify-center px-4 pt-20"
             >
-              <div className="text-center">
+              <div className="text-center flex flex-col md:flex-row items-center justify-center gap-8 max-w-6xl mx-auto">
+                <div className="flex-1">
+                  <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6 }}
+                  >
+                    <h1 className="heading-xl mb-4">
+                      Hi, I'm <span className="text-gradient">Ayushman Raj</span>
+                    </h1>
+                    <JobTitle />
+                    <p className="max-w-2xl mx-auto mb-12 text-lg">
+                      I craft responsive websites and web applications that provide
+                      intuitive, pixel-perfect user experiences.
+                    </p>
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                      <Button
+                        asChild
+                        size="lg"
+                        className="group"
+                      >
+                        <a href="#contact">
+                          Get In Touch
+                        </a>
+                      </Button>
+                      <Button
+                        asChild
+                        size="lg"
+                        variant="outline"
+                        className="group"
+                      >
+                        <a href="/src/assets/resume.pdf" download="ayushman_raj_resume.pdf" className="flex items-center gap-2">
+                          Download Resume
+                          <Download size={16} className="transition-transform group-hover:-translate-y-1" />
+                        </a>
+                      </Button>
+                    </div>
+                  </motion.div>
+                </div>
                 <motion.div
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.6 }}
+                  className="flex-1"
                 >
-                  <h1 className="heading-xl mb-4">
-                    Hi, I'm <span className="text-gradient">John Doe</span>
-                  </h1>
-                  <h2 className="heading-md mb-8 text-muted-foreground">
-                    Full Stack Developer
-                  </h2>
-                  <p className="max-w-2xl mx-auto mb-12 text-lg">
-                    I craft responsive websites and web applications that provide
-                    intuitive, pixel-perfect user experiences.
-                  </p>
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <Button
-                      asChild
-                      size="lg"
-                      className="group"
-                    >
-                      <a href="#contact">
-                        Get In Touch
-                      </a>
-                    </Button>
-                    <Button
-                      asChild
-                      size="lg"
-                      variant="outline"
-                      className="group"
-                    >
-                      <a href="/src/assets/resume.pdf" download="john_doe_resume.pdf" className="flex items-center gap-2">
-                        Download Resume
-                        <Download size={16} className="transition-transform group-hover:-translate-y-1" />
-                      </a>
-                    </Button>
+                  <div className="relative w-64 h-64 mx-auto">
+                    <img
+                      src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158"
+                      alt="Ayushman Raj"
+                      className="rounded-full w-full h-full object-cover shadow-xl"
+                    />
+                    <div className="absolute inset-0 rounded-full glass opacity-20"></div>
                   </div>
                 </motion.div>
-                <motion.div
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  transition={{ delay: 1, duration: 1 }}
-                  className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
-                >
-                  <a
-                    href="#about"
-                    className="flex flex-col items-center animate-bounce"
-                  >
-                    <span className="text-sm mb-2">Scroll Down</span>
-                    <ArrowDown size={20} />
-                  </a>
-                </motion.div>
               </div>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 1, duration: 1 }}
+                className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
+              >
+                <a
+                  href="#about"
+                  className="flex flex-col items-center animate-bounce"
+                >
+                  <span className="text-sm mb-2">Scroll Down</span>
+                  <ArrowDown size={20} />
+                </a>
+              </motion.div>
             </section>
 
-            {/* About Section */}
             <AnimatedSection id="about" className="container">
               <SectionTitle 
                 title="About Me" 
@@ -248,7 +256,6 @@ const IndexPage = () => {
               </div>
             </AnimatedSection>
 
-            {/* Skills Section */}
             <AnimatedSection id="skills" className="container bg-primary/5">
               <SectionTitle 
                 title="My Skills" 
@@ -266,7 +273,6 @@ const IndexPage = () => {
               </div>
             </AnimatedSection>
 
-            {/* Projects Section */}
             <AnimatedSection id="projects" className="container">
               <SectionTitle 
                 title="My Projects" 
@@ -287,7 +293,6 @@ const IndexPage = () => {
               </div>
             </AnimatedSection>
 
-            {/* Education Section */}
             <AnimatedSection id="education" className="container bg-primary/5">
               <SectionTitle 
                 title="Education" 
@@ -307,7 +312,6 @@ const IndexPage = () => {
               </div>
             </AnimatedSection>
 
-            {/* Achievements Section */}
             <AnimatedSection id="achievements" className="container">
               <SectionTitle 
                 title="Achievements" 
@@ -326,7 +330,6 @@ const IndexPage = () => {
               </div>
             </AnimatedSection>
 
-            {/* Contact Section */}
             <AnimatedSection id="contact" className="container">
               <SectionTitle 
                 title="Contact Me" 
