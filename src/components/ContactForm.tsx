@@ -57,10 +57,10 @@ const ContactForm = () => {
           </div>
           
           <div className="flex space-x-4 mt-6">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="glass p-3 rounded-full hover:bg-primary/20 transition-colors">
+            <a href="https://github.com/AJ-AYUSHMAN" target="_blank" rel="noopener noreferrer" className="glass p-3 rounded-full hover:bg-primary/20 transition-colors">
               <Github size={20} />
             </a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="glass p-3 rounded-full hover:bg-primary/20 transition-colors">
+            <a href="https://linkedin.com/in/ayushman-raj" target="_blank" rel="noopener noreferrer" className="glass p-3 rounded-full hover:bg-primary/20 transition-colors">
               <Linkedin size={20} />
             </a>
           </div>

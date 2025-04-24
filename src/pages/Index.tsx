@@ -31,73 +31,68 @@ const IndexPage = () => {
     },
     {
       title: 'Backend Development',
-      skills: ['Node.js', 'Express', 'MongoDB', 'PostgreSQL', 'Firebase']
+      skills: ['Node.js', 'Express', 'MongoDB', 'Firebase']
     },
     {
       title: 'Tools & Others',
-      skills: ['Git', 'Docker', 'AWS', 'Jest', 'CI/CD', 'Webpack']
+      skills: ['Git', 'GitHub', 'Unity', 'Figma']
     }
   ];
 
   const projectsData = [
     {
-      title: 'E-Commerce Platform',
-      description: 'A full-featured online store with product listings, user authentication, and payment processing.',
-      technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-      imageUrl: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085',
+      title: 'Multi-Shooter-Game',
+      description: 'A game inspired buy BGMI TDM with multiplayer.',
+      technologies: ['Unity', 'Photon', 'Mixamo'],
+      imageUrl: '/src/assets/multishooter game.png',
       projectUrl: '#'
     },
     {
-      title: 'Social Media Dashboard',
-      description: 'Analytics dashboard for social media accounts with real-time data visualization.',
-      technologies: ['Next.js', 'TypeScript', 'Firebase', 'Recharts'],
-      imageUrl: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d',
+      title: 'Infinite Runner',
+      description: 'Endless Runner game build on Unity 3D.',
+      technologies: ['Unity', 'Mixamo'],
+      imageUrl: '/src/assets/infinite.png',
       projectUrl: '#'
     },
     {
-      title: 'Fitness Tracker App',
-      description: 'Mobile application to track workouts, nutrition, and fitness progress over time.',
-      technologies: ['React Native', 'Redux', 'GraphQL'],
-      imageUrl: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6',
+      title: 'Target Shooter',
+      description: 'This game was build on unity 2D.',
+      technologies: ['Unity', 'Mixamo'],
+      imageUrl: '/src/assets/Target.png',
       projectUrl: '#'
     }
   ];
 
   const educationData = [
     {
-      institution: 'Stanford University',
-      degree: 'M.S. in Computer Science',
-      period: '2018 - 2020',
-      description: 'Specialized in Artificial Intelligence and Machine Learning'
+      institution: 'Lovely Professional University',
+      degree: 'B.Tech in Computer Science',
+      period: '2022 - 2026',
+      description: 'Specialized in Game Development and UI'
     },
     {
-      institution: 'University of California, Berkeley',
-      degree: 'B.S. in Computer Engineering',
-      period: '2014 - 2018',
-      description: 'Minor in Mathematics'
+      institution: 'Levana Public School',
+      degree: '10th and 12th',
+      period: '2018 - 2022',
+      description: 'Schooling'
     }
   ];
 
   const timelineData = [
     {
-      date: '2023',
-      title: 'Senior Software Engineer',
-      description: 'Led a team of 5 developers to build a scalable e-commerce platform',
+      date: '2024',
+      title: 'Google Arcade Advanced Milstone',
+      description: 'Participated in Google Arcade programme and achieved the Advanced milstone.',
     },
     {
-      date: '2022',
-      title: 'Best Web App Award',
-      description: 'Received recognition for innovative dashboard solution',
+      date: '2024',
+      title: 'Google DevFest',
+      description: 'Secured 4th place among 5 in quiz.',
     },
     {
-      date: '2021',
-      title: 'Software Engineer II',
-      description: 'Promoted after successful delivery of multiple key projects',
-    },
-    {
-      date: '2020',
-      title: 'Open Source Contribution',
-      description: 'Became a core contributor to a popular JavaScript framework',
+      date: '2024',
+      title: 'Gssoc Contribution',
+      description: 'Contributed in Gssoc ext. 2024 and got 619th rank.',
     }
   ];
 
@@ -125,7 +120,7 @@ const IndexPage = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-xl text-muted-foreground"
             >
-              Full Stack Developer
+              Game Developer
             </motion.div>
           </motion.div>
         ) : (
@@ -148,8 +143,7 @@ const IndexPage = () => {
                     </h1>
                     <JobTitle />
                     <p className="max-w-2xl mb-12 text-lg">
-                      I craft responsive websites and web applications that provide
-                      intuitive, pixel-perfect user experiences.
+                      I make games for fun.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4">
                       <Button
@@ -183,7 +177,7 @@ const IndexPage = () => {
                 >
                   <div className="relative w-72 h-72 mx-auto">
                     <img
-                      src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158"
+                      src="/src/assets/Ayupic.jpeg"
                       alt="Ayushman Raj"
                       className="rounded-full w-full h-full object-cover shadow-xl"
                     />
@@ -220,15 +214,15 @@ const IndexPage = () => {
                   className="glass-card p-8 rounded-xl"
                 >
                   <p className="text-lg mb-4">
-                    I am a passionate Full Stack Developer with a focus on creating elegant, 
-                    efficient, and user-friendly applications. With 5+ years of experience in 
+                    I am a passionate Game Developer with a focus on creating elegant, 
+                    efficientGames. With 1+ years of experience in 
                     the field, I have developed a strong understanding of both frontend and 
                     backend technologies.
                   </p>
                   <p className="text-lg mb-4">
-                    My journey in software development began during college, where I discovered 
-                    my love for coding. Since then, I've worked on a variety of projects ranging 
-                    from small business websites to complex enterprise applications.
+                    My journey in game development began during college, where I discovered 
+                    my love for making games. Since then, I've worked on a variety of projects ranging 
+                    from small games to complex games.
                   </p>
                   <p className="text-lg">
                     I believe in writing clean, maintainable code and constantly strive to 
@@ -243,14 +237,14 @@ const IndexPage = () => {
                 >
                   <div className="glass p-2 rounded-xl">
                     <img 
-                      src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158" 
-                      alt="John Doe" 
+                      src="/src/assets/Ayupic.jpeg" 
+                      alt="Ayushman Raj" 
                       className="rounded-lg w-full h-auto" 
                     />
                   </div>
                   <div className="absolute -bottom-4 -right-4 glass-card p-4 rounded-lg w-48">
-                    <p className="font-bold">5+ Years Experience</p>
-                    <p className="text-sm text-muted-foreground">Full Stack Development</p>
+                    <p className="font-bold">1+ Years Experience</p>
+                    <p className="text-sm text-muted-foreground">Game Development</p>
                   </div>
                 </motion.div>
               </div>
