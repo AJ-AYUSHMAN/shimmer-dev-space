@@ -97,7 +97,7 @@ const IndexPage = () => {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col bg-background">
+    <div className="min-h-screen flex flex-col bg-white">
       <AnimatePresence>
         {loading ? (
           <motion.div
@@ -131,8 +131,8 @@ const IndexPage = () => {
               id="home" 
               className="min-h-screen flex items-center justify-center px-4 pt-20"
             >
-              <div className="text-center flex flex-col md:flex-row items-center justify-center gap-16 max-w-6xl mx-auto">
-                <div className="flex-1 text-left">
+              <div className="text-center flex flex-col md:flex-row items-center justify-between max-w-6xl mx-auto w-full">
+                <div className="flex-1 text-left md:pr-12">
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -173,7 +173,7 @@ const IndexPage = () => {
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.6 }}
-                  className="flex-1"
+                  className="flex-1 md:flex-none md:w-96 mt-8 md:mt-0"
                 >
                   <div className="relative w-72 h-72 mx-auto">
                     <img
