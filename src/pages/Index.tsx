@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
@@ -103,13 +102,7 @@ const IndexPage = () => {
   ];
 
   return (
-    <div 
-      className="min-h-screen flex flex-col" 
-      style={{ 
-        background: 'linear-gradient(to top, #accbee 0%, #e7f0fd 100%)', 
-        backgroundAttachment: 'fixed' 
-      }}
-    >
+    <div className="min-h-screen flex flex-col bg-background">
       <AnimatePresence>
         {loading ? (
           <motion.div
