@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
@@ -102,7 +103,13 @@ const IndexPage = () => {
   ];
 
   return (
-    <div className="min-h-screen flex flex-col bg-background">
+    <div 
+      className="min-h-screen flex flex-col" 
+      style={{ 
+        background: 'linear-gradient(to top, #accbee 0%, #e7f0fd 100%)', 
+        backgroundAttachment: 'fixed' 
+      }}
+    >
       <AnimatePresence>
         {loading ? (
           <motion.div
@@ -136,8 +143,8 @@ const IndexPage = () => {
               id="home" 
               className="min-h-screen flex items-center justify-center px-4 pt-20"
             >
-              <div className="text-center flex flex-col md:flex-row items-center justify-center gap-8 max-w-6xl mx-auto">
-                <div className="flex-1">
+              <div className="text-center flex flex-col md:flex-row items-center justify-center gap-16 max-w-6xl mx-auto">
+                <div className="flex-1 text-left">
                   <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -147,11 +154,11 @@ const IndexPage = () => {
                       Hi, I'm <span className="text-gradient">Ayushman Raj</span>
                     </h1>
                     <JobTitle />
-                    <p className="max-w-2xl mx-auto mb-12 text-lg">
+                    <p className="max-w-2xl mb-12 text-lg">
                       I craft responsive websites and web applications that provide
                       intuitive, pixel-perfect user experiences.
                     </p>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <div className="flex flex-col sm:flex-row gap-4">
                       <Button
                         asChild
                         size="lg"
@@ -181,7 +188,7 @@ const IndexPage = () => {
                   transition={{ duration: 0.6 }}
                   className="flex-1"
                 >
-                  <div className="relative w-64 h-64 mx-auto">
+                  <div className="relative w-72 h-72 mx-auto">
                     <img
                       src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158"
                       alt="Ayushman Raj"
