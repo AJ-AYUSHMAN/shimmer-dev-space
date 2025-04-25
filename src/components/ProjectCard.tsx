@@ -1,5 +1,6 @@
 
 import { motion } from 'framer-motion';
+import { useState } from 'react';
 
 export interface ProjectProps {
   title: string;
@@ -18,6 +19,24 @@ const ProjectCard = ({
   projectUrl,
   index 
 }: ProjectProps) => {
+  const [imgSrc, setImgSrc] = useState(imageUrl);
+  const [imgError, setImgError] = useState(false);
+  
+  const handleImageError = () => {
+    // If the image fails to load, try with a relative path without the "/src" prefix
+    if (imgSrc === imageUrl && imageUrl.startsWith('/src')) {
+      const newPath = imageUrl.substring(4); // Remove '/src' from the beginning
+      console.log(`Trying alternative path: ${newPath}`);
+      setImgSrc(newPath);
+      return;
+    }
+    
+    // If that also fails, use the placeholder
+    console.error(`Failed to load image: ${imgSrc}`);
+    setImgSrc('/placeholder.svg');
+    setImgError(true);
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -27,14 +46,10 @@ const ProjectCard = ({
     >
       <div className="h-48 overflow-hidden">
         <img 
-          src={imageUrl} 
+          src={imgSrc} 
           alt={title} 
-          className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
-          onError={(e) => {
-            const target = e.target as HTMLImageElement;
-            console.error(`Failed to load image: ${target.src}`);
-            target.src = '/placeholder.svg'; // Fallback to placeholder
-          }}
+          className={`w-full h-full object-cover transition-transform duration-300 hover:scale-110 ${imgError ? 'opacity-70' : ''}`}
+          onError={handleImageError}
         />
       </div>
       
