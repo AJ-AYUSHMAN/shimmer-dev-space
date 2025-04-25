@@ -46,21 +46,21 @@ const IndexPage = () => {
       title: 'Multi-Shooter-Game',
       description: 'A game inspired buy BGMI TDM with multiplayer.',
       technologies: ['Unity', 'Photon', 'Mixamo'],
-      imageUrl: './assets/multishooter game.jpg',
+      imageUrl: '/src/pages/assets/multishooter game.jpg',
       projectUrl: '#'
     },
     {
       title: 'Infinite Runner',
       description: 'Endless Runner game build on Unity 3D.',
       technologies: ['Unity', 'Mixamo'],
-      imageUrl: './assets/infinite.png',
+      imageUrl: '/src/pages/assets/infinite.png',
       projectUrl: '#'
     },
     {
       title: 'Target Shooter',
       description: 'This game was build on unity 2D.',
       technologies: ['Unity', 'Mixamo'],
-      imageUrl: './assets/Target.png',
+      imageUrl: '/src/pages/assets/Target.png',
       projectUrl: '#'
     }
   ];
@@ -184,7 +184,7 @@ const IndexPage = () => {
                         variant="outline"
                         className="group"
                       >
-                        <a href="./assets/resume.pdf" download="ayushman_raj_resume.pdf" className="flex items-center gap-2">
+                        <a href="/src/pages/assets/resume.pdf" download="ayushman_raj_resume.pdf" className="flex items-center gap-2">
                           Download Resume
                           <Download size={16} className="transition-transform group-hover:-translate-y-1" />
                         </a>
@@ -200,7 +200,7 @@ const IndexPage = () => {
                 >
                   <div className="relative w-72 h-72 mx-auto">
                     <img
-                      src="./assets/ayushmanpic3.jpg"
+                      src="/src/pages/assets/ayushmanpic3.jpg"
                       alt="Ayushman Raj"
                       className="rounded-full w-full h-full object-cover shadow-xl"
                     />
@@ -260,7 +260,7 @@ const IndexPage = () => {
                 >
                   <div className="glass p-2 rounded-xl">
                     <img 
-                      src="./assets/ayushmanpic3.jpg" 
+                      src="/src/pages/assets/ayushmanpic3.jpg" 
                       alt="Ayushman Raj" 
                       className="rounded-lg w-full h-auto" 
                     />
