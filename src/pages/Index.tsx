@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
@@ -45,21 +46,21 @@ const IndexPage = () => {
       title: 'Multi-Shooter-Game',
       description: 'A game inspired buy BGMI TDM with multiplayer.',
       technologies: ['Unity', 'Photon', 'Mixamo'],
-      imageUrl: 'https://github.com/AJ-AYUSHMAN/shimmer-dev-space/blob/main/src/assets/multishooter%20game.jpg',
+      imageUrl: '/src/assets/multishooter game.jpg',
       projectUrl: '#'
     },
     {
       title: 'Infinite Runner',
       description: 'Endless Runner game build on Unity 3D.',
       technologies: ['Unity', 'Mixamo'],
-      imageUrl: 'https://github.com/AJ-AYUSHMAN/shimmer-dev-space/blob/main/src/assets/infinite.png',
+      imageUrl: '/src/assets/infinite.png',
       projectUrl: '#'
     },
     {
       title: 'Target Shooter',
       description: 'This game was build on unity 2D.',
       technologies: ['Unity', 'Mixamo'],
-      imageUrl: 'https://github.com/AJ-AYUSHMAN/shimmer-dev-space/blob/main/src/assets/Target.png',
+      imageUrl: '/src/assets/Target.png',
       projectUrl: '#'
     }
   ];
@@ -199,7 +200,7 @@ const IndexPage = () => {
                 >
                   <div className="relative w-72 h-72 mx-auto">
                     <img
-                      src="https://github.com/AJ-AYUSHMAN/shimmer-dev-space/blob/main/src/assets/ayushmanpic3.jpg"
+                      src="/src/assets/ayushmanpic3.jpg"
                       alt="Ayushman Raj"
                       className="rounded-full w-full h-full object-cover shadow-xl"
                     />
@@ -259,7 +260,7 @@ const IndexPage = () => {
                 >
                   <div className="glass p-2 rounded-xl">
                     <img 
-                      src="https://github.com/AJ-AYUSHMAN/shimmer-dev-space/blob/main/src/assets/ayushmanpic3.jpg" 
+                      src="/src/assets/ayushmanpic3.jpg" 
                       alt="Ayushman Raj" 
                       className="rounded-lg w-full h-auto" 
                     />
