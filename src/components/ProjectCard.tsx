@@ -1,5 +1,6 @@
 
 import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
 
 export interface ProjectProps {
   title: string;
@@ -18,6 +19,34 @@ const ProjectCard = ({
   projectUrl,
   index 
 }: ProjectProps) => {
+  const [imageSrc, setImageSrc] = useState(imageUrl);
+
+  useEffect(() => {
+    // This helps with dynamically resolving the image path in different environments
+    const img = new Image();
+    img.src = imageUrl;
+    
+    img.onload = () => {
+      setImageSrc(imageUrl);
+    };
+    
+    img.onerror = () => {
+      // Try alternative path formats if the original fails
+      const alternativePath = imageUrl.replace(/^\/src\//, './');
+      const img2 = new Image();
+      img2.src = alternativePath;
+      
+      img2.onload = () => {
+        setImageSrc(alternativePath);
+      };
+      
+      img2.onerror = () => {
+        console.error(`Failed to load image: ${imageUrl}`);
+        setImageSrc('/placeholder.svg'); // Fallback to placeholder
+      };
+    };
+  }, [imageUrl]);
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
@@ -27,14 +56,9 @@ const ProjectCard = ({
     >
       <div className="h-48 overflow-hidden">
         <img 
-          src={imageUrl} 
+          src={imageSrc} 
           alt={title} 
           className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
-          onError={(e) => {
-            const target = e.target as HTMLImageElement;
-            console.error(`Failed to load image: ${target.src}`);
-            target.src = '/placeholder.svg'; // Fallback to placeholder
-          }}
         />
       </div>
       
