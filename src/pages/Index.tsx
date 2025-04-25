@@ -106,15 +106,15 @@ const IndexPage = () => {
       credentialUrl: "#"
     },
     {
-      title: "Game Development in Unity with C#",
-      issuer: "CipherSchools",
-      date: "July 2024",
+      title: "Cloud Computing",
+      issuer: "NPTEL",
+      date: "November 2024",
       credentialUrl: "#"
     },
     {
-      title: "Advanced Game Development",
-      issuer: "Unity Learn",
-      date: "November 2024",
+      title: "Game Development in Unity with C#",
+      issuer: "CipherSchools",
+      date: "July 2024",
       credentialUrl: "#"
     }
   ];
