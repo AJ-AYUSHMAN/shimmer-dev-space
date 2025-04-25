@@ -45,21 +45,21 @@ const IndexPage = () => {
       title: 'Multi-Shooter-Game',
       description: 'A game inspired buy BGMI TDM with multiplayer.',
       technologies: ['Unity', 'Photon', 'Mixamo'],
-      imageUrl: './src/assets/multishooter game.jpg',
+      imageUrl: 'https://github.com/AJ-AYUSHMAN/shimmer-dev-space/blob/main/src/assets/multishooter%20game.jpg',
       projectUrl: '#'
     },
     {
       title: 'Infinite Runner',
       description: 'Endless Runner game build on Unity 3D.',
       technologies: ['Unity', 'Mixamo'],
-      imageUrl: './src/assets/infinite.png',
+      imageUrl: 'https://github.com/AJ-AYUSHMAN/shimmer-dev-space/blob/main/src/assets/infinite.png',
       projectUrl: '#'
     },
     {
       title: 'Target Shooter',
       description: 'This game was build on unity 2D.',
       technologies: ['Unity', 'Mixamo'],
-      imageUrl: './src/assets/Target.png',
+      imageUrl: 'https://github.com/AJ-AYUSHMAN/shimmer-dev-space/blob/main/src/assets/Target.png',
       projectUrl: '#'
     }
   ];
