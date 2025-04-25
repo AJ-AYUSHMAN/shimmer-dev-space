@@ -13,6 +13,7 @@ import Footer from '@/components/Footer';
 import { Button } from '@/components/ui/button';
 import { Download, ArrowDown } from 'lucide-react';
 import JobTitle from '@/components/JobTitle';
+import CertificationCard from '@/components/CertificationCard';
 
 const IndexPage = () => {
   const [loading, setLoading] = useState(true);
@@ -44,21 +45,21 @@ const IndexPage = () => {
       title: 'Multi-Shooter-Game',
       description: 'A game inspired buy BGMI TDM with multiplayer.',
       technologies: ['Unity', 'Photon', 'Mixamo'],
-      imageUrl: '/src/assets/multishooter game.jpg',
+      imageUrl: './src/assets/multishooter game.jpg',
       projectUrl: '#'
     },
     {
       title: 'Infinite Runner',
       description: 'Endless Runner game build on Unity 3D.',
       technologies: ['Unity', 'Mixamo'],
-      imageUrl: '/src/assets/infinite.png',
+      imageUrl: './src/assets/infinite.png',
       projectUrl: '#'
     },
     {
       title: 'Target Shooter',
       description: 'This game was build on unity 2D.',
       technologies: ['Unity', 'Mixamo'],
-      imageUrl: '/src/assets/Target.png',
+      imageUrl: './src/assets/Target.png',
       projectUrl: '#'
     }
   ];
@@ -93,6 +94,27 @@ const IndexPage = () => {
       date: '2024',
       title: 'Gssoc Contribution',
       description: 'Contributed in Gssoc ext. 2024 and got 619th rank.',
+    }
+  ];
+
+  const certificationsData = [
+    {
+      title: "Introduction to Game Development",
+      issuer: "Unity Learn",
+      date: "March 2024",
+      credentialUrl: "#"
+    },
+    {
+      title: "C# Programming for Unity Game Development",
+      issuer: "Coursera",
+      date: "February 2024",
+      credentialUrl: "#"
+    },
+    {
+      title: "Advanced Game Development",
+      issuer: "Unity Learn",
+      date: "January 2024",
+      credentialUrl: "#"
     }
   ];
 
@@ -318,6 +340,25 @@ const IndexPage = () => {
                     date={item.date}
                     title={item.title}
                     description={item.description}
+                    index={index}
+                  />
+                ))}
+              </div>
+            </AnimatedSection>
+
+            <AnimatedSection id="certifications" className="container">
+              <SectionTitle 
+                title="Certifications" 
+                subtitle="Professional certifications and courses I've completed."
+              />
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {certificationsData.map((cert, index) => (
+                  <CertificationCard
+                    key={index}
+                    title={cert.title}
+                    issuer={cert.issuer}
+                    date={cert.date}
+                    credentialUrl={cert.credentialUrl}
                     index={index}
                   />
                 ))}
