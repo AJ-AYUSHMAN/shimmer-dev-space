@@ -99,21 +99,21 @@ const IndexPage = () => {
 
   const certificationsData = [
     {
-      title: "Introduction to Game Development",
-      issuer: "Unity Learn",
-      date: "March 2024",
+      title: "Introduction to MERN",
+      issuer: "Programming Pathsala",
+      date: "Febuary 2025",
       credentialUrl: "#"
     },
     {
-      title: "C# Programming for Unity Game Development",
-      issuer: "Coursera",
-      date: "February 2024",
+      title: "Game Development in Unity with C#",
+      issuer: "CipherSchools",
+      date: "July 2024",
       credentialUrl: "#"
     },
     {
       title: "Advanced Game Development",
       issuer: "Unity Learn",
-      date: "January 2024",
+      date: "November 2024",
       credentialUrl: "#"
     }
   ];
