@@ -199,7 +199,7 @@ const IndexPage = () => {
                 >
                   <div className="relative w-72 h-72 mx-auto">
                     <img
-                      src="/src/assets/Ayupic.jpeg"
+                      src="https://github.com/AJ-AYUSHMAN/shimmer-dev-space/blob/main/src/assets/ayushmanpic3.jpg"
                       alt="Ayushman Raj"
                       className="rounded-full w-full h-full object-cover shadow-xl"
                     />
@@ -259,7 +259,7 @@ const IndexPage = () => {
                 >
                   <div className="glass p-2 rounded-xl">
                     <img 
-                      src="/src/assets/Ayupic.jpeg" 
+                      src="https://github.com/AJ-AYUSHMAN/shimmer-dev-space/blob/main/src/assets/ayushmanpic3.jpg" 
                       alt="Ayushman Raj" 
                       className="rounded-lg w-full h-auto" 
                     />
