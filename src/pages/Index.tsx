@@ -47,21 +47,21 @@ const IndexPage = () => {
       description: 'A game inspired buy BGMI TDM with multiplayer.',
       technologies: ['Unity', 'Photon', 'Mixamo'],
       imageUrl: '/src/pages/assets/multishooter game.jpg',
-      projectUrl: '#'
+      projectUrl: 'https://github.com/AJ-AYUSHMAN/Jio-games-project'
     },
     {
       title: 'Infinite Runner',
       description: 'Endless Runner game build on Unity 3D.',
       technologies: ['Unity', 'Mixamo'],
       imageUrl: '/src/pages/assets/infinite.png',
-      projectUrl: '#'
+      projectUrl: 'https://github.com/AJ-AYUSHMAN/Infinite-Runner'
     },
     {
       title: 'Target Shooter',
       description: 'This game was build on unity 2D.',
       technologies: ['Unity', 'Mixamo'],
       imageUrl: '/src/pages/assets/Target.png',
-      projectUrl: '#'
+      projectUrl: 'https://github.com/AJ-AYUSHMAN/Target-shooting-Game'
     }
   ];
 
