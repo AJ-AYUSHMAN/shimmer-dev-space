@@ -46,21 +46,21 @@ const IndexPage = () => {
       title: 'Multi-Shooter-Game',
       description: 'A game inspired buy BGMI TDM with multiplayer.',
       technologies: ['Unity', 'Photon', 'Mixamo'],
-      imageUrl: '@/assets/multishooter game.jpg',
+      imageUrl: '/src/pages/assets/multishooter game.jpg',
       projectUrl: '#'
     },
     {
       title: 'Infinite Runner',
       description: 'Endless Runner game build on Unity 3D.',
       technologies: ['Unity', 'Mixamo'],
-      imageUrl: '@/assets/infinite.png',
+      imageUrl: '/src/pages/assets/infinite.png',
       projectUrl: '#'
     },
     {
       title: 'Target Shooter',
       description: 'This game was build on unity 2D.',
       technologies: ['Unity', 'Mixamo'],
-      imageUrl: '@/assets/Target.png',
+      imageUrl: '/src/pages/assets/Target.png',
       projectUrl: '#'
     }
   ];
