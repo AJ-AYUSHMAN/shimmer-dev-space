@@ -143,7 +143,7 @@ const IndexPage = () => {
               transition={{ duration: 0.5, delay: 0.2 }}
               className="text-xl text-muted-foreground"
             >
-              Game Developer
+              Developer
             </motion.div>
           </motion.div>
         ) : (
