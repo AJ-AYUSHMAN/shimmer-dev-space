@@ -29,7 +29,7 @@ const IndexPage = () => {
   const skillsData = [
     {
       title: 'Frontend Development',
-      skills: ['React.js', 'Next.js', 'TypeScript', 'Tailwind CSS', 'Redux']
+      skills: ['React.js', 'React Native', 'TypeScript', 'Tailwind CSS', 'Redux']
     },
     {
       title: 'Backend Development',

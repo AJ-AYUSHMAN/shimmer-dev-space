@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const JobTitle = () => {
-  const titles = ["Game Developer", "UI Designer"];
+  const titles = ["App Developer","Game Developer", "UI Designer"];
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
